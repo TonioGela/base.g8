@@ -1,0 +1,170 @@
+### Package Files ###
+# *.jar
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+### Java & Scala ###
+*.class
+*.log
+*.ctxt
+.mtj.tmp/
+hs_err_pid*
+
+### SBT ###
+dist/*
+target/
+lib_managed/
+src_managed/
+project/boot/
+project/plugins/project/
+.history
+.cache
+.lib/
+.bsp/
+
+### Bloop ###
+.bloop/
+
+### Metals ###
+.metals/
+project/metals.sbt
+
+### Intellij ###
+# Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio, WebStorm and Rider
+*.iws
+*.iml
+*.ipr
+.idea/*
+.idea_modules/
+out/
+cmake-build-*/
+modules.xml
+com_crashlytics_export_strings.xml
+atlassian-ide-plugin.xml
+crashlytics.properties
+crashlytics-build.properties
+fabric.properties
+
+### VisualStudioCode ###
+.vscode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+
+### macOS ###
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+### Spark ###
+*#*#
+*.#*
+*.iml
+*.ipr
+*.pyc
+*.pyo
+*.swp
+*~
+.classpath
+.ensime
+.ensime_cache/
+.ensime_lucene
+.generated-mima*
+.idea/
+.project
+.pydevproject
+.scala_dependencies
+.settings
+#/lib/
+R-unit-tests.log
+R/unit-tests.out
+R/cran-check.out
+R/pkg/vignettes/sparkr-vignettes.html
+R/pkg/tests/fulltests/Rplots.pdf
+build/*.jar
+build/apache-maven*
+build/scala*
+build/zinc*
+cache
+checkpoint
+conf/*.cmd
+conf/*.conf
+conf/*.properties
+conf/*.sh
+conf/*.xml
+conf/java-opts
+conf/slaves
+dependency-reduced-pom.xml
+derby.log
+dev/create-release/*final
+dev/create-release/*txt
+dev/pr-deps/
+dist/
+docs/_site
+docs/api
+sql/docs
+sql/site
+lint-r-report.log
+log/
+logs/
+project/build/target/
+project/plugins/lib_managed/
+project/plugins/project/build.properties
+project/plugins/src_managed/
+project/plugins/target/
+python/lib/pyspark.zip
+python/deps
+python/test_coverage/coverage_data
+python/test_coverage/htmlcov
+python/pyspark/python
+reports/
+scalastyle-on-compile.generated.xml
+scalastyle-output.xml
+scalastyle.txt
+spark-*-bin-*.tgz
+spark-tests.log
+streaming-tests.log
+unit-tests.log
+work/
+docs/.jekyll-metadata
+
+# For Hive
+TempStatsStore/
+metastore/
+metastore_db/
+sql/hive-thriftserver/test_warehouses
+warehouse/
+spark-warehouse/
+
+# For R session data
+.RData
+.RHistory
+.Rhistory
+*.Rproj
+*.Rproj.*
+
+.Rproj.user
+
+# For SBT
+.jvmopts
