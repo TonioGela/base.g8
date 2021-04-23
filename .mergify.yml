@@ -1,0 +1,8 @@
+pull_request_rules:
+  - name: Automatically Merge Scala Steward PRs on CI success
+    conditions:
+      - author=TonioGela
+      - status-success~=Build and Test
+    actions:
+      merge:
+        method: merge
