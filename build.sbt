@@ -21,6 +21,6 @@ lazy val root = (project in file(".")).enablePlugins(ScriptedPlugin).settings(
     ("org.typelevel"    % "kind-projector"      % "0.11.3").cross(CrossVersion.full),
     ("com.github.cb372" % "scala-typed-holes"   % "0.1.8").cross(CrossVersion.full),
     "com.olegpy"       %% "better-monadic-for"  % "0.3.1",
-    "org.typelevel"    %% "munit-cats-effect-3" % "1.0.1"
+    "org.typelevel"    %% "munit-cats-effect-3" % "1.0.2"
   )
 )
