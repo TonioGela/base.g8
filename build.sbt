@@ -14,11 +14,12 @@ lazy val root = (project in file(".")).enablePlugins(ScriptedPlugin).settings(
   // These are here for scala-steward
   scalafixDependencies += "com.github.liancheng" %% "organize-imports" % "0.5.0",
   libraryDependencies += Seq(
-    "org.typelevel"    %% "cats-effect"        % "3.1.0",
-    "com.monovore"     %% "decline-effect"     % "1.3.0",
-    "is.cir"           %% "ciris"              % "2.0.0-RC2",
-    "org.typelevel"    %% "kind-projector"     % "0.10.3",
-    "com.github.cb372" %% "scala-typed-holes"  % "0.1.6",
-    "com.olegpy"       %% "better-monadic-for" % "0.3.1"
+    "org.typelevel"    %% "cats-effect"         % "3.1.0",
+    "com.monovore"     %% "decline-effect"      % "1.3.0",
+    "is.cir"           %% "ciris"               % "2.0.0-RC2",
+    ("org.typelevel"    % "kind-projector"      % "0.11.3").cross(CrossVersion.full),
+    ("com.github.cb372" % "scala-typed-holes"   % "0.1.8").cross(CrossVersion.full),
+    "com.olegpy"       %% "better-monadic-for"  % "0.3.1",
+    "org.typelevel"    %% "munit-cats-effect-3" % "1.0.2"
   )
 )

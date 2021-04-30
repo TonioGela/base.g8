@@ -9,15 +9,17 @@ import org.scalafmt.sbt.ScalafmtPlugin.autoImport._
 
 object Settings {
 
-  private lazy val compilerPlugins: List[ModuleID] = List(
-    "org.typelevel"    %% "kind-projector"     % "0.10.3",
-    ("com.github.cb372" % "scala-typed-holes"  % "0.1.8").cross(CrossVersion.full),
-    "com.olegpy"       %% "better-monadic-for" % "0.3.1"
-  ).map(compilerPlugin)
+  def crossVersionFullPlugin(p: ModuleID) = compilerPlugin(p.cross(CrossVersion.full))
 
-  private lazy val scalaLangVersion: String = "2.13.5"
+  private val compilerPlugins: List[ModuleID] = List(
+    compilerPlugin("com.olegpy"              %% "better-monadic-for" % "0.3.1"),
+    crossVersionFullPlugin("org.typelevel"    % "kind-projector"     % "0.11.3"),
+    crossVersionFullPlugin("com.github.cb372" % "scala-typed-holes"  % "0.1.8")
+  )
 
-  lazy val globalSettings: List[Def.Setting[_]] = List[Def.Setting[_]](
+  private val scalaLangVersion: String = "2.13.5"
+
+  val globalSettings: List[Def.Setting[_]] = List[Def.Setting[_]](
     // improved classLoader layering (google it)
     turbo := true,
     // most useful setting ever
@@ -30,7 +32,7 @@ object Settings {
     watchForceTriggerOnAnyChange := true
   )
 
-  lazy val commonSettings: List[Def.Setting[_]] = List[Def.Setting[_]](
+  val commonSettings: List[Def.Setting[_]] = List[Def.Setting[_]](
     scalaVersion := scalaLangVersion,
     organization := "$organization$",
     organizationName := "$organization_name$",
@@ -43,14 +45,14 @@ object Settings {
     scalafixOnCompile := true
   )
 
-  lazy val scalaFixSettings: List[Def.Setting[_]] = List[Def.Setting[_]](
+  val scalaFixSettings: List[Def.Setting[_]] = List[Def.Setting[_]](
     scalafixScalaBinaryVersion := "2.13",
     semanticdbEnabled := true,
     semanticdbVersion := scalafixSemanticdb.revision,
     scalafixDependencies += "com.github.liancheng" %% "organize-imports" % "0.5.0"
   )
 
-  lazy val sbtGithubActionsSettings: List[Def.Setting[_]] = List[Def.Setting[_]](
+  val sbtGithubActionsSettings: List[Def.Setting[_]] = List[Def.Setting[_]](
     githubWorkflowPublishTargetBranches := Seq(),
     githubWorkflowScalaVersions := Seq(scalaLangVersion)
   )
