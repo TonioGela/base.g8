@@ -1,3 +1,6 @@
+fix compiler plugins
+take src and test from ce3.g8
+
 developers
 licenza
 pre-commit.yml
