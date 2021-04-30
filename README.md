@@ -1,4 +1,4 @@
-A [Giter8][g8] template for [Cats-effect 3](https://typelevel.org/cats-effect/) with a lot of bells and whistles!
+A [Giter8][https://github.com/foundweekends/giter8] template for [Cats-effect 3](https://typelevel.org/cats-effect/) with a lot of bells and whistles!
 
 This template features:
 - a strong scalafmt configuration
