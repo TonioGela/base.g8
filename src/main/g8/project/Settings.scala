@@ -26,6 +26,7 @@ object Settings {
     onChangedBuildSource := ReloadOnSourceChanges,
     // I like implicit success
     showSuccess := false,
+    excludeLintKeys += showSuccess,
     // clears screen before and after each task
     watchBeforeCommand := Watch.clearScreen,
     watchTriggeredMessage := Watch.clearScreenOnTrigger,
@@ -46,7 +47,7 @@ object Settings {
   )
 
   val publicSettings: List[Def.Setting[_]] = List[Def.Setting[_]](
-    homepage := Some(url("")),
+    homepage := None, //Some(url(""))
     licenses += "MIT" -> url("https://spdx.org/licenses/MIT.html"),
     developers += Developer("TonioGela", "Antonio Gelameris", "toniogela89@gmail.com", url("https://toniogela.dev"))
   )
