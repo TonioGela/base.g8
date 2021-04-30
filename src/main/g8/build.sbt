@@ -2,7 +2,7 @@ import Dependencies._
 import Settings._
 
 inScope(Global)(globalSettings)
-inThisBuild(commonSettings ++ scalaFixSettings ++ sbtGithubActionsSettings)
+inThisBuild(scalaFixSettings ++ sbtGithubActionsSettings ++ publicSettings)
 
 lazy val root = (project in file("."))
-  .settings(name := "$name$", libraryDependencies ++= coreDependencies ++ testDependencies)
+  .settings(name := "$name$", commonSettings, libraryDependencies ++= coreDependencies ++ testDependencies)

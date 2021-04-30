@@ -25,12 +25,16 @@ project/plugins/project/
 .cache
 .lib/
 .bsp/
+**/*/target/
+target/
 
-### Bloop ###
+### Bloop & Metals ###
 .bloop/
-
-### Metals ###
 .metals/
+project/target
+project/.bloop
+project/project
+project/project.*
 project/metals.sbt
 
 ### Intellij ###
@@ -38,6 +42,7 @@ project/metals.sbt
 *.iws
 *.iml
 *.ipr
+.idea/ 
 .idea/*
 .idea_modules/
 out/

@@ -45,6 +45,12 @@ object Settings {
     scalafixOnCompile := true
   )
 
+  val publicSettings: List[Def.Setting[_]] = List[Def.Setting[_]](
+    homepage := Some(url("")),
+    licenses += "MIT" -> url("https://spdx.org/licenses/MIT.html"),
+    developers += Developer("TonioGela", "Antonio Gelameris", "toniogela89@gmail.com", url("https://toniogela.dev"))
+  )
+
   val scalaFixSettings: List[Def.Setting[_]] = List[Def.Setting[_]](
     scalafixScalaBinaryVersion := "2.13",
     semanticdbEnabled := true,
