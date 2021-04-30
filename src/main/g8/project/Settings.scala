@@ -1,17 +1,19 @@
 import sbt._
+import sbt.nio.Keys._
 import sbt.Keys._
 import sbt.librarymanagement.ModuleID
+import sbtghactions.GitHubActionsPlugin.autoImport._
+import sbtghactions.GenerativePlugin.autoImport._
+import scalafix.sbt.ScalafixPlugin.autoImport._
+import org.scalafmt.sbt.ScalafmtPlugin.autoImport._
 
 object Settings {
 
-  //IS THIS NEEDED?
-  private def crossPlugin(x: ModuleID) = compilerPlugin(x.cross(CrossVersion.full))
-
-  lazy val compilerPlugins: List[ModuleID] = List(
-    crossPlugin("org.typelevel"    %% "kind-projector"     % "0.10.3"),
-    crossPlugin("com.github.cb372" %% "scala-typed-holes"  % "0.1.6"),
-    compilerPlugin("com.olegpy"    %% "better-monadic-for" % "0.3.1")
-  )
+  private lazy val compilerPlugins: List[ModuleID] = List(
+    "org.typelevel"    %% "kind-projector"     % "0.10.3",
+    "com.github.cb372" %% "scala-typed-holes"  % "0.1.6",
+    "com.olegpy"       %% "better-monadic-for" % "0.3.1"
+  ).map(compilerPlugin)
 
   private lazy val scalaLangVersion: String = "2.13.5"
 
@@ -36,6 +38,7 @@ object Settings {
     scalacOptions -= "-Xfatal-warnings",
     scalacOptions += "-Yimports:" ++ Seq("scala", "scala.Predef", "cats", "cats.data", "cats.implicits", "cats.effect")
       .mkString(","),
+    libraryDependencies ++= compilerPlugins,
     scalafmtOnCompile := true,
     scalafixOnCompile := true
   )
