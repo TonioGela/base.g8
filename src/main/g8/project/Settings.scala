@@ -11,7 +11,7 @@ object Settings {
 
   private lazy val compilerPlugins: List[ModuleID] = List(
     "org.typelevel"    %% "kind-projector"     % "0.10.3",
-    "com.github.cb372" %% "scala-typed-holes"  % "0.1.8",
+    ("com.github.cb372" % "scala-typed-holes"  % "0.1.8").cross(CrossVersion.full),
     "com.olegpy"       %% "better-monadic-for" % "0.3.1"
   ).map(compilerPlugin)
 
