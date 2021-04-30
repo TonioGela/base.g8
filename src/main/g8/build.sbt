@@ -1,13 +1,7 @@
-ThisBuild / organization := "com.example"
-ThisBuild / scalaVersion := "2.13.5"
+import Dependencies._
+import Settings._
 
-inThisBuild(List(
-  scalafixScalaBinaryVersion := "2.13",
-  semanticdbEnabled := true,
-  semanticdbVersion := scalafixSemanticdb.revision,
-  scalafixDependencies += "com.github.liancheng" %% "organize-imports" % "0.5.0",
-  githubWorkflowPublishTargetBranches := Seq(),
-  githubWorkflowScalaVersions := Seq(scalaVersion.value)
-))
+inScope(Global)(globalSettings)
+inThisBuild(commonSettings ++ scalaFixSettings)
 
-lazy val root = (project in file(".")).settings(name := "base.g8")
+lazy val root = (project in file(".")).settings(name := "$name$", sbtGithubActionsSettings)
