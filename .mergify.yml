@@ -1,11 +1,15 @@
 pull_request_rules:
-  - name: Automatically Merge Scala Steward PRs on CI success
+  - name: Label Scala Steward PRs as dependency-update
     conditions:
-      - author=TonioGela
-      - status-success~=Build and Test
+      - title~=Update .* to .*
     actions:
       label:
         add: [dependency-update]
+  - name: Merge Scala Steward PRs on CI success
+    conditions:
+      - label=dependency-update
+      - status-success~=Build and Test
+    actions:
       merge:
-        method: merge
+        method: rebase
         strict: true
