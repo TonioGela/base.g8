@@ -13,7 +13,7 @@ object Settings {
 
   private val compilerPlugins: List[ModuleID] = List(
     compilerPlugin("com.olegpy"              %% "better-monadic-for" % "0.3.1"),
-    crossVersionFullPlugin("org.typelevel"    % "kind-projector"     % "0.11.3"),
+    crossVersionFullPlugin("org.typelevel"    % "kind-projector"     % "0.12.0"),
     crossVersionFullPlugin("com.github.cb372" % "scala-typed-holes"  % "0.1.8")
   )
 
