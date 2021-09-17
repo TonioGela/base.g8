@@ -3,6 +3,6 @@ libraryDependencies += "org.scala-sbt"  %% "scripted-plugin"    % sbtVersion.val
 // These are here for scala-steward
 addSbtPlugin("com.codecommit"            % "sbt-github-actions" % "0.12.0")
 addSbtPlugin("org.scalameta"             % "sbt-scalafmt"       % "2.4.3")
-addSbtPlugin("ch.epfl.scala"             % "sbt-scalafix"       % "0.9.30")
+addSbtPlugin("ch.epfl.scala"             % "sbt-scalafix"       % "0.9.31")
 addSbtPlugin("io.github.davidgregory084" % "sbt-tpolecat"       % "0.1.20")
 addSbtPlugin("com.timushev.sbt"          % "sbt-updates"        % "0.6.0")
