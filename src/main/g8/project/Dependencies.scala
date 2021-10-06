@@ -5,7 +5,7 @@ object Dependencies {
 
   val coreDependencies: Seq[ModuleID] = Seq(
     "org.typelevel" %% "cats-effect"    % "3.2.9",
-    "com.monovore"  %% "decline-effect" % "2.1.0",
+    "com.monovore"  %% "decline-effect" % "2.2.0",
     "is.cir"        %% "ciris"          % "2.1.0"
   )
 
