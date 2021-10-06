@@ -9,6 +9,6 @@ object Dependencies {
     "is.cir"        %% "ciris"          % "2.1.0"
   )
 
-  val testDependencies: Seq[ModuleID] = Seq("org.typelevel" %% "munit-cats-effect-3" % "1.0.5").map(_ % Test)
+  val testDependencies: Seq[ModuleID] = Seq("org.typelevel" %% "munit-cats-effect-3" % "1.0.6").map(_ % Test)
 
 }
