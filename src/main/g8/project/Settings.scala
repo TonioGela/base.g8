@@ -17,7 +17,7 @@ object Settings {
     crossVersionFullPlugin("com.github.cb372" % "scala-typed-holes"  % "0.1.9")
   )
 
-  private val scalaLangVersion: String = "2.13.5"
+  private val scalaLangVersion: String = "2.13.6"
 
   val globalSettings: List[Def.Setting[_]] = List[Def.Setting[_]](
     // improved classLoader layering (google it)
@@ -39,7 +39,7 @@ object Settings {
     organizationName  := "$organization_name$",
     version           := "0.0.1-SNAPSHOT",
     scalacOptions -= "-Xfatal-warnings",
-    scalacOptions += "-Yimports:" ++ Seq("scala", "scala.Predef", "cats", "cats.data", "cats.implicits", "cats.effect")
+    scalacOptions += "-Yimports:" ++ Seq("scala", "scala.Predef", "cats", "cats.data", "cats.implicits", "cats.effect"$if(add_fs2.truthy)$, "fs2"$endif$)
       .mkString(","),
     libraryDependencies ++= compilerPlugins,
     scalafmtOnCompile := true,
