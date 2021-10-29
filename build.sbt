@@ -12,6 +12,7 @@ lazy val root = (project in file(".")).enablePlugins(ScriptedPlugin).settings(
   // this makes g8 buggy
   useSuperShell                                   := false,
   ThisBuild / githubWorkflowPublishTargetBranches := Seq(),
+  ThisBuild / githubWorkflowScalaVersions         := Seq("2.12.13"),
   ThisBuild / githubWorkflowBuild := Seq(WorkflowStep.Sbt(List("g8Test"), name = Some("Testing template"))),
   // These are here for scala-steward
   scalafixDependencies += "com.github.liancheng" %% "organize-imports" % "0.5.0",
