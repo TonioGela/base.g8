@@ -39,15 +39,22 @@ object Settings {
     organizationName  := "$organization_name$",
     version           := "0.0.1-SNAPSHOT",
     scalacOptions -= "-Xfatal-warnings",
-    scalacOptions += "-Yimports:" ++ Seq("scala", "scala.Predef", "cats", "cats.data", "cats.implicits", "cats.effect"$if(add_fs2.truthy)$, "fs2"$endif$)
-      .mkString(","),
+    scalacOptions += "-Yimports:" ++ Seq(
+      "scala",
+      "scala.Predef",
+      "cats",
+      "cats.data",
+      "cats.implicits",
+      "cats.effect".$if(add_fs2.truthy) $,
+      "fs2" $endif$
+    ).mkString(","),
     libraryDependencies ++= compilerPlugins,
     scalafmtOnCompile := true,
     scalafixOnCompile := true
   )
 
   val publicSettings: List[Def.Setting[_]] = List[Def.Setting[_]](
-    homepage          := None, //Some(url(""))
+    homepage          := None, // Some(url(""))
     licenses += "MIT" -> url("https://spdx.org/licenses/MIT.html"),
     developers += Developer("TonioGela", "Antonio Gelameris", "toniogela89@gmail.com", url("https://toniogela.dev"))
   )
