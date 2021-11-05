@@ -15,7 +15,7 @@ lazy val root = (project in file(".")).enablePlugins(ScriptedPlugin).settings(
   ThisBuild / githubWorkflowScalaVersions         := Seq("2.12.13"),
   ThisBuild / githubWorkflowBuild := Seq(WorkflowStep.Sbt(List("g8Test"), name = Some("Testing template"))),
   // These are here for scala-steward
-  scalafixDependencies += "com.github.liancheng" %% "organize-imports" % "0.5.0",
+  scalafixDependencies += "com.github.liancheng" %% "organize-imports" % "0.6.0",
   libraryDependencies ++= Seq(
     "org.typelevel"    %% "cats-effect"         % "3.2.9",
     "co.fs2"           %% "fs2-core"            % "3.2.2",
