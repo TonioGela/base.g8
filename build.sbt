@@ -20,7 +20,7 @@ lazy val root = (project in file(".")).enablePlugins(ScriptedPlugin).settings(
     "org.typelevel"    %% "cats-effect"         % "3.2.9",
     "co.fs2"           %% "fs2-core"            % "3.2.2",
     "com.monovore"     %% "decline-effect"      % "2.2.0",
-    "is.cir"           %% "ciris"               % "2.2.0",
+    "is.cir"           %% "ciris"               % "2.2.1",
     ("org.typelevel"    % "kind-projector"      % "0.13.2").cross(CrossVersion.full),
     ("com.github.cb372" % "scala-typed-holes"   % "0.1.9").cross(CrossVersion.full),
     "com.olegpy"       %% "better-monadic-for"  % "0.3.1",
