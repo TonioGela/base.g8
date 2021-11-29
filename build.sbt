@@ -17,7 +17,7 @@ lazy val root = (project in file(".")).enablePlugins(ScriptedPlugin).settings(
   // These are here for scala-steward
   scalafixDependencies += "com.github.liancheng" %% "organize-imports" % "0.6.0",
   libraryDependencies ++= Seq(
-    "org.typelevel"    %% "cats-effect"         % "3.2.9",
+    "org.typelevel"    %% "cats-effect"         % "3.3.0",
     "co.fs2"           %% "fs2-core"            % "3.2.2",
     "com.monovore"     %% "decline-effect"      % "2.2.0",
     "is.cir"           %% "ciris"               % "2.2.1",
