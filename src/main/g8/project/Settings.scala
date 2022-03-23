@@ -14,10 +14,10 @@ object Settings {
   private val compilerPlugins: List[ModuleID] = List(
     compilerPlugin("com.olegpy"              %% "better-monadic-for" % "0.3.1"),
     crossVersionFullPlugin("org.typelevel"    % "kind-projector"     % "0.13.2"),
-    crossVersionFullPlugin("com.github.cb372" % "scala-typed-holes"  % "0.1.9")
+    crossVersionFullPlugin("com.github.cb372" % "scala-typed-holes"  % "0.1.11")
   )
 
-  private val scalaLangVersion: String = "2.13.6"
+  private val scalaLangVersion: String = "2.13.8"
 
   val globalSettings: List[Def.Setting[_]] = List[Def.Setting[_]](
     // improved classLoader layering (google it)
@@ -39,15 +39,17 @@ object Settings {
     organizationName  := "$organization_name$",
     version           := "0.0.1-SNAPSHOT",
     scalacOptions -= "-Xfatal-warnings",
+    // format: off
     scalacOptions += "-Yimports:" ++ Seq("scala", "scala.Predef", "cats", "cats.data", "cats.implicits", "cats.effect"$if(add_fs2.truthy)$, "fs2"$endif$)
       .mkString(","),
+    // format: on
     libraryDependencies ++= compilerPlugins,
     scalafmtOnCompile := true,
     scalafixOnCompile := true
   )
 
   val publicSettings: List[Def.Setting[_]] = List[Def.Setting[_]](
-    homepage          := None, //Some(url(""))
+    homepage          := None, // Some(url(""))
     licenses += "MIT" -> url("https://spdx.org/licenses/MIT.html"),
     developers += Developer("TonioGela", "Antonio Gelameris", "toniogela89@gmail.com", url("https://toniogela.dev"))
   )
