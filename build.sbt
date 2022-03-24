@@ -4,7 +4,7 @@
 // See http://www.foundweekends.org/giter8/testing.html#Using+the+Giter8Plugin for more details.
 lazy val root = (project in file(".")).enablePlugins(ScriptedPlugin).settings(
   name                                            := "base.g8",
-  scalaVersion                                    := "2.12.15",
+  scalaVersion                                    := "2.13.8",
   Test / test                                     := { val _ = (Test / g8Test).toTask("").value },
   scriptedLaunchOpts ++=
     List("-Xms1024m", "-Xmx1024m", "-XX:ReservedCodeCacheSize=128m", "-Xss2m", "-Dfile.encoding=UTF-8"),
@@ -13,7 +13,7 @@ lazy val root = (project in file(".")).enablePlugins(ScriptedPlugin).settings(
   // this makes g8 buggy
   useSuperShell                                   := false,
   ThisBuild / githubWorkflowPublishTargetBranches := Seq(),
-  ThisBuild / githubWorkflowScalaVersions         := Seq("2.12.15"),
+  ThisBuild / githubWorkflowScalaVersions         := Seq("2.13.8"),
   ThisBuild / githubWorkflowBuild := Seq(WorkflowStep.Sbt(List("g8Test"), name = Some("Testing template"))),
   // These are here for scala-steward
   scalafixDependencies += "com.github.liancheng" %% "organize-imports" % "0.6.0",
