@@ -7,7 +7,7 @@ object Dependencies {
     "org.typelevel"                %% "cats-effect"    % "3.3.13",
     "com.monovore"                 %% "decline-effect" % "2.3.0",
     "is.cir"                       %% "ciris"          % "2.3.2",
-    $if(add_fs2.truthy) $ "co.fs2" %% "fs2-core"       % "3.2.8" $endif$
+    $if(add_fs2.truthy) $ "co.fs2" %% "fs2-core"       % "3.2.9" $endif$
   )
 
   val testDependencies: Seq[ModuleID] = Seq("org.typelevel" %% "munit-cats-effect-3" % "1.0.7").map(_ % Test)
