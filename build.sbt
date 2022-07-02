@@ -19,7 +19,7 @@ lazy val root = (project in file(".")).enablePlugins(ScriptedPlugin).settings(
   scalafixDependencies += "com.github.liancheng" %% "organize-imports" % "0.6.0",
   libraryDependencies ++= Seq(
     "org.typelevel"    %% "cats-effect"         % "3.3.13",
-    "co.fs2"           %% "fs2-core"            % "3.2.8",
+    "co.fs2"           %% "fs2-core"            % "3.2.9",
     "com.monovore"     %% "decline-effect"      % "2.3.0",
     "is.cir"           %% "ciris"               % "2.3.2",
     ("org.typelevel"    % "kind-projector"      % "0.13.2").cross(CrossVersion.full),
