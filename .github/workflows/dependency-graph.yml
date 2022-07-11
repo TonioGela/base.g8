@@ -1,0 +1,14 @@
+name: Submit Dependency Graph
+on:
+  push:
+    branches:
+      - main
+jobs:
+  submit-graph:
+    name: Submit Dependency Graph
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v3
+      - uses: scalacenter/sbt-dependency-graph-action@v1
