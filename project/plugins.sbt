@@ -1,4 +1,4 @@
-addSbtPlugin("org.foundweekends.giter8" %% "sbt-giter8"         % "0.15.1")
+addSbtPlugin("org.foundweekends.giter8" %% "sbt-giter8"         % "0.16.0")
 libraryDependencies += "org.scala-sbt"  %% "scripted-plugin"    % sbtVersion.value
 // These are here for scala-steward
 addSbtPlugin("com.codecommit"            % "sbt-github-actions" % "0.14.2")
