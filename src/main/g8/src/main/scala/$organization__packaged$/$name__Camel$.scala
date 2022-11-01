@@ -1,5 +1,3 @@
-package $organization;format="package"$
+package $organization; format = "package" $
 
-object $name;format="Camel"$ {
-  def say(): IO[String] = IO.delay("Hello Cats Effect!")
-}
+object $name; format = "Camel" $ { def say(): IO[String] = IO.delay("Hello Cats Effect!") }
