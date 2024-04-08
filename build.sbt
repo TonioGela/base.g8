@@ -1,6 +1,6 @@
 lazy val root = (project in file(".")).settings(
   name                                            := "base.g8",
-  scalaVersion                                    := "2.12.19",
+  scalaVersion                                    := "2.13.13",
   Test / test                                     := { val _ = (Test / g8Test).toTask("").value },
   scriptedLaunchOpts ++= List(
     "-Xms1024m",
@@ -10,7 +10,7 @@ lazy val root = (project in file(".")).settings(
     "-Dfile.encoding=UTF-8"
   ),
   ThisBuild / githubWorkflowPublishTargetBranches := Seq(),
-  ThisBuild / githubWorkflowScalaVersions         := Seq("2.12.19"),
+  ThisBuild / githubWorkflowScalaVersions         := Seq("2.13.13"),
   ThisBuild / githubWorkflowBuild                 :=
     Seq(WorkflowStep.Sbt(List("g8Test"), name = Some("Testing template"))),
   // These are here for scala-steward
