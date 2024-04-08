@@ -1,8 +1,21 @@
 import Dependencies._
-import Settings._
 
-inScope(Global)(globalSettings)
-inThisBuild(scalaFixSettings ++ sbtGithubActionsSettings ++ publicSettings)
+inScope(Global)(
+  List(onChangedBuildSource := ReloadOnSourceChanges, showSuccess := false, excludeLintKeys += showSuccess)
+)
 
-lazy val root = (project in file("."))
-  .settings(name := "$name$", commonSettings, libraryDependencies ++= coreDependencies ++ testDependencies)
+inThisBuild(List(
+  crossScalaVersions                  := List("3.4.1"),
+  githubWorkflowPublishTargetBranches := Nil,
+  semanticdbEnabled                   := true,
+  semanticdbVersion                   := scalafixSemanticdb.revision
+))
+
+lazy val root = (project in file(".")).settings(
+  scalaVersion     := "3.4.1",
+  name             := "$name$",
+  organization     := "dev.toniogela",
+  organizationName := "toniogela.dev",
+  version          := "0.0.1-SNAPSHOT",
+  libraryDependencies ++= coreDependencies ++ testDependencies
+)

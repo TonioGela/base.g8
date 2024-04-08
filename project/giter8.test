@@ -3,7 +3,6 @@ $ exists src/main/scala/dev/toniogela/Effectfool.scala
 $ exists src/main/scala/dev/toniogela/Main.scala
 $ exists src/test/scala/dev/toniogela/EffectfoolSuite.scala
 $ exists project/plugins.sbt
-$ exists project/Settings.scala
 $ exists project/Dependencies.scala
 $ exists project/build.properties
 $ exists build.sbt
