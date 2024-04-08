@@ -10,8 +10,9 @@ object Dependencies {
     "com.monovore"  %% "decline-effect" % "2.4.1"
   )
 
-  val testDependencies: Seq[ModuleID] =
-    Seq("com.disneystreaming" %% "weaver-cats" % "0.8.3", "com.disneystreaming" %% "weaver-scalacheck" % "0.8.3")
-      .map(_ % Test)
+  val testDependencies: Seq[ModuleID] = Seq(
+    "com.disneystreaming" %% "weaver-cats"       % "0.8.4",
+    "com.disneystreaming" %% "weaver-scalacheck" % "0.8.3"
+  ).map(_ % Test)
 
 }
