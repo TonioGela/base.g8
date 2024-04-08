@@ -19,7 +19,7 @@ lazy val root = (project in file(".")).settings(
     "org.typelevel"       %% "cats-effect"       % "3.5.4",
     "co.fs2"              %% "fs2-io"            % "3.10.2",
     "com.monovore"        %% "decline-effect"    % "2.4.1",
-    "com.disneystreaming" %% "weaver-cats"       % "0.8.3",
-    "com.disneystreaming" %% "weaver-scalacheck" % "0.8.3"
+    "com.disneystreaming" %% "weaver-cats"       % "0.8.4",
+    "com.disneystreaming" %% "weaver-scalacheck" % "0.8.4"
   )
 )
