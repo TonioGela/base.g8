@@ -20,6 +20,6 @@ lazy val root = (project in file(".")).settings(
     "com.disneystreaming" %% "weaver-cats"       % "0.8.4",
     "com.disneystreaming" %% "weaver-scalacheck" % "0.8.4",
     "org.scala-lang"       % "scala-library"     % "2.13.14",
-    "org.scala-lang"       % "scala3-library_3"  % "3.4.1"
+    "org.scala-lang"       % "scala3-library_3"  % "3.4.2"
   )
 )
