@@ -13,7 +13,7 @@ lazy val root = (project in file(".")).settings(
     List(WorkflowStep.Sbt(List("g8Test"), name = Some("Testing template"))),
   // These are here for scala-steward
   libraryDependencies ++= Seq(
-    "org.typelevel"       %% "cats-core"         % "2.10.0",
+    "org.typelevel"       %% "cats-core"         % "2.11.0",
     "org.typelevel"       %% "cats-effect"       % "3.5.4",
     "co.fs2"              %% "fs2-io"            % "3.10.2",
     "com.monovore"        %% "decline-effect"    % "2.4.1",
