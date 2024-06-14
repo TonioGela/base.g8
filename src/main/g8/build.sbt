@@ -1,8 +1,10 @@
 import Dependencies._
 
-inScope(Global)(
-  List(onChangedBuildSource := ReloadOnSourceChanges, showSuccess := false, excludeLintKeys += showSuccess)
-)
+inScope(Global)(List(
+  onChangedBuildSource := ReloadOnSourceChanges,
+  showSuccess          := false,
+  excludeLintKeys += showSuccess
+))
 
 inThisBuild(List(
   crossScalaVersions                  := List("3.4.1"),
