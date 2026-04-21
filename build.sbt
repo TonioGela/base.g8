@@ -24,7 +24,7 @@ lazy val root = (project in file(".")).settings(
   // These are here for scala-steward
   libraryDependencies ++= Seq(
     "org.typelevel" %% "cats-core"         % "2.13.0",
-    "org.typelevel" %% "cats-effect"       % "3.5.7",
+    "org.typelevel" %% "cats-effect"       % "3.7.0",
     "co.fs2"        %% "fs2-io"            % "3.13.0",
     "com.monovore"  %% "decline-effect"    % "2.6.2",
     "org.typelevel" %% "weaver-cats"       % "0.12.0",
