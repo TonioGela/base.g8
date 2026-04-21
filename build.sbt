@@ -17,8 +17,8 @@ lazy val root = (project in file(".")).settings(
     "org.typelevel"       %% "cats-effect"       % "3.5.7",
     "co.fs2"              %% "fs2-io"            % "3.13.0",
     "com.monovore"        %% "decline-effect"    % "2.6.2",
-    "com.disneystreaming" %% "weaver-cats"       % "0.8.4",
-    "com.disneystreaming" %% "weaver-scalacheck" % "0.8.4",
+    "org.typelevel" %% "weaver-cats"       % "0.12.0",
+    "org.typelevel" %% "weaver-scalacheck" % "0.12.0",
     "org.scala-lang"       % "scala-library"     % "2.13.18",
     "org.scala-lang"       % "scala3-library_3"  % "3.4.3"
   )

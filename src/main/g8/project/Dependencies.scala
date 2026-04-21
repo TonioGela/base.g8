@@ -11,8 +11,8 @@ object Dependencies {
   )
 
   val testDependencies: Seq[ModuleID] = Seq(
-    "com.disneystreaming" %% "weaver-cats"       % "0.8.4",
-    "com.disneystreaming" %% "weaver-scalacheck" % "0.8.3"
+    "org.typelevel" %% "weaver-cats"       % "0.12.0",
+    "org.typelevel" %% "weaver-scalacheck" % "0.12.0"
   ).map(_ % Test)
 
 }
