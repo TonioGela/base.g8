@@ -30,6 +30,6 @@ lazy val root = (project in file(".")).settings(
     "org.typelevel" %% "weaver-cats"       % "0.12.0",
     "org.typelevel" %% "weaver-scalacheck" % "0.12.0",
     "org.scala-lang" % "scala-library"     % "2.13.18",
-    "org.scala-lang" % "scala3-library_3"  % "3.4.3"
+    "org.scala-lang" % "scala3-library_3"  % "3.8.3"
   )
 )
