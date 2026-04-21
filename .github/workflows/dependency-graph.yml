@@ -1,14 +1,14 @@
-name: Submit Dependency Graph
+# .github/workflows/dependency-graph.yml
+name: Update Dependency Graph
 on:
   push:
     branches:
       - main
 jobs:
-  submit-graph:
-    name: Submit Dependency Graph
+  dependency-graph:
+    name: Update Dependency Graph
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
     steps:
       - uses: actions/checkout@v3
-      - uses: scalacenter/sbt-dependency-graph-action@v1
+      - uses: sbt/setup-sbt@v1
+      - uses: scalacenter/sbt-dependency-submission@v2

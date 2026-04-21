@@ -4,9 +4,9 @@ import sbt.Keys._
 object Dependencies {
 
   val coreDependencies: Seq[ModuleID] = Seq(
-    "org.typelevel" %% "cats-core"      % "2.12.0",
-    "org.typelevel" %% "cats-effect"    % "3.5.4",
-    "co.fs2"        %% "fs2-io"         % "3.10.2",
+    "org.typelevel" %% "cats-core"      % "2.13.0",
+    "org.typelevel" %% "cats-effect"    % "3.5.7",
+    "co.fs2"        %% "fs2-io"         % "3.13.0",
     "com.monovore"  %% "decline-effect" % "2.4.1"
   )
 
