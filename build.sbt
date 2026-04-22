@@ -1,5 +1,5 @@
 lazy val root = (project in file(".")).settings(
-  name                                            := "base.g8",
+  name                         := "base.g8",
   scriptedLaunchOpts ++= List(
     "-Xms1024m",
     "-Xmx1024m",
@@ -7,19 +7,29 @@ lazy val root = (project in file(".")).settings(
     "-Xss2m",
     "-Dfile.encoding=UTF-8"
   ),
+  ThisBuild / organization     := "dev.toniogela",
+  ThisBuild / organizationName := "TonioGela",
+  ThisBuild / startYear        := Some(2023),
+  ThisBuild / licenses         := Seq(License.MIT),
+  ThisBuild / homepage         := Some(url(s"https://cross.toniogela.dev/")),
+  ThisBuild / developers       := List(tlGitHubDev("TonioGela", "Antonio Gelameris")),
   ThisBuild / githubWorkflowPublishTargetBranches := Nil,
   ThisBuild / githubWorkflowScalaVersions         := List("2.12"),
+  ThisBuild / tlBaseVersion                       := "0.0",
   ThisBuild / githubWorkflowBuild                 :=
     List(WorkflowStep.Sbt(List("g8Test"), name = Some("Testing template"))),
+  ThisBuild / mergifyStewardConfig ~= {
+    _.map(_.withMergeMinors(true).withAuthor("toniogela-s-scala-steward[bot]"))
+  },
   // These are here for scala-steward
   libraryDependencies ++= Seq(
-    "org.typelevel"       %% "cats-core"         % "2.13.0",
-    "org.typelevel"       %% "cats-effect"       % "3.5.7",
-    "co.fs2"              %% "fs2-io"            % "3.13.0",
-    "com.monovore"        %% "decline-effect"    % "2.6.2",
+    "org.typelevel" %% "cats-core"         % "2.13.0",
+    "org.typelevel" %% "cats-effect"       % "3.5.7",
+    "co.fs2"        %% "fs2-io"            % "3.13.0",
+    "com.monovore"  %% "decline-effect"    % "2.6.2",
     "org.typelevel" %% "weaver-cats"       % "0.12.0",
     "org.typelevel" %% "weaver-scalacheck" % "0.12.0",
-    "org.scala-lang"       % "scala-library"     % "2.13.18",
-    "org.scala-lang"       % "scala3-library_3"  % "3.4.3"
+    "org.scala-lang" % "scala-library"     % "2.13.18",
+    "org.scala-lang" % "scala3-library_3"  % "3.4.3"
   )
 )
