@@ -1,4 +1,5 @@
 addSbtPlugin("org.typelevel" % "sbt-typelevel-github-actions" % "0.8.5")
+addSbtPlugin("org.typelevel" % "sbt-typelevel-mergify"        % "0.8.5")
 addSbtPlugin("org.typelevel" % "sbt-tpolecat"                 % "0.5.3")
-addSbtPlugin("org.scalameta" % "sbt-scalafmt"                 % "2.5.6")
+addSbtPlugin("org.scalameta" % "sbt-scalafmt"                 % "2.6.0")
 addSbtPlugin("ch.epfl.scala" % "sbt-scalafix"                 % "0.14.6")
