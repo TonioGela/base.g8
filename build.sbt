@@ -18,9 +18,8 @@ lazy val root = (project in file(".")).settings(
   ThisBuild / tlBaseVersion                       := "0.0",
   ThisBuild / githubWorkflowBuild                 :=
     List(WorkflowStep.Sbt(List("g8Test"), name = Some("Testing template"))),
-  ThisBuild / mergifyStewardConfig ~= {
-    _.map(_.withMergeMinors(true).withAuthor("toniogela-s-scala-steward[bot]"))
-  },
+  ThisBuild / mergifyStewardConfig ~=
+    { _.map(_.withMergeMinors(true).withAuthor("toniogela-s-scala-steward[bot]")) },
   // These are here for scala-steward
   libraryDependencies ++= Seq(
     "org.typelevel" %% "cats-core"         % "2.13.0",
