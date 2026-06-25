@@ -3,6 +3,6 @@ libraryDependencies += "org.scala-sbt"            %% "scripted-plugin" % sbtVers
 // These are here for scala-steward
 addSbtPlugin("org.typelevel"             % "sbt-typelevel"         % "0.8.6")
 addSbtPlugin("org.typelevel"             % "sbt-typelevel-mergify" % "0.8.6")
-addSbtPlugin("org.typelevel"             % "sbt-tpolecat"          % "0.5.6")
+addSbtPlugin("org.typelevel"             % "sbt-tpolecat"          % "0.5.7")
 addSbtPlugin("org.scalameta"             % "sbt-scalafmt"          % "2.6.1")
 addSbtPlugin("ch.epfl.scala"             % "sbt-scalafix"          % "0.14.7")
